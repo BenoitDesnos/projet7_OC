@@ -1,0 +1,60 @@
+//maps
+$font-size: (basic: 1.5rem,
+    title1: 4rem,
+    title2: 1.7rem,
+    title3: 1.5rem,
+    title4: 1.4rem,
+    paragraph: 24px,
+);
+$breakpoints: (mobile: 700px,
+    tablet: 1024px,
+);
+/*  -------------------- colors ---------------------- */
+$color-1: white;
+$color-2: #FF6060;
+
+
+/*  -------------------- gaps ---------------------- */
+$large-gap: 60px;
+$medium-gap: 30px;
+$small-gap: 15px;
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style-type: none;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    color: $color-2;
+
+    &::selection {
+        color: $color-1;
+        background: $color-2;
+    }
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+    overflow-x: hidden;
+
+    @media screen and (max-width: 430px) {
+        position: relative;
+        max-width: 100vw;
+        overflow-y: initial;
+    }
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
