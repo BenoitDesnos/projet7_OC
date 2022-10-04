@@ -20,7 +20,11 @@ function Gallery() {
     <ul className="thumbs__container">
       {lodgings.map((lodging) => (
         <li key={lodging.id} className="thumbs">
-          <img src={lodging.cover} alt={"miniature de " + lodging.title} />
+          <a href="http://localhost:3000/lodging">
+            <img src={lodging.cover} alt={"miniature de " + lodging.title} />
+            <div className="thumbs__filter"></div>
+            <h3>{lodging.title}</h3>
+          </a>
         </li>
       ))}
     </ul>

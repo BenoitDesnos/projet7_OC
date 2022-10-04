@@ -44,6 +44,7 @@ body {
 
     overflow-x: hidden;
     margin: auto;
+    padding: 0 $medium-gap 0 $medium-gap;
 
     @media screen and (max-width: 430px) {
         position: relative;
@@ -60,4 +61,5 @@ main {
     max-width: 90%;
     max-width: 1240px;
     margin: auto;
+
 }
