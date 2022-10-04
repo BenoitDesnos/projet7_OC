@@ -1,11 +1,13 @@
-import React from "react";
+import Banner from "../components/Banner";
+import Gallery from "../components/Gallery";
 import Navigation from "../components/Navigation";
 
 const Home = () => {
   return (
     <main>
       <Navigation />
-      <h1>Bonjour</h1>
+      <Banner />
+      <Gallery />
     </main>
   );
 };

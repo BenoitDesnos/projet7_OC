@@ -1,0 +1,34 @@
+.banner__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    border-radius: 25px;
+    overflow: hidden;
+    max-width: 1240px;
+    height: 223px;
+    background-image: url(../../../public/assets/banner.png);
+    background-position: center;
+    margin-top: $large-gap;
+
+
+    h2 {
+        background-color: transparent;
+        color: $color-3;
+        z-index: 1;
+        font-weight: 400;
+        font-size: 48px;
+    }
+
+    .banner__filter {
+        position: absolute;
+        background: #000000;
+        mix-blend-mode: darken;
+        opacity: 0.3;
+        width: 100%;
+        height: 100%;
+
+
+    }
+}

@@ -1,0 +1,19 @@
+.thumbs__container {
+    width: 100%;
+    background-color: darken($color: $color-4, $amount: 30%);
+    margin-top: $large-gap;
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: $small-gap 0 $small-gap 0;
+
+    .thumbs {
+        margin: $medium-gap;
+        width: 340px;
+        height: 340px;
+        background-color: $color-2;
+        border-radius: 10px;
+    }
+
+}
