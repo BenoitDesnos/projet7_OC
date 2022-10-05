@@ -5,18 +5,21 @@ import Navigation from "../components/Navigation";
 import Carrousel from "./../components/Carrousel";
 import starFull from "../assets/VectorStarFull.svg";
 import starEmpty from "../assets/VectorStarEmpty.svg";
+import Collapse from "../components/Collapse";
 
 const Lodging = ({ lodgings }) => {
   const { id } = useParams();
 
   const [pictures, setPictures] = useState([]);
   const [tags, setTags] = useState([]);
+  const [equipments, setEquipments] = useState([]);
   const [title, setTitle] = useState("");
   const [location, setLocation] = useState("");
   const [clickCount, setClickCount] = useState(0);
   const [rating, setRating] = useState(0);
   const [hostName, setHostName] = useState("");
   const [hostPicture, setHostPicture] = useState("");
+  const [description, setDescription] = useState("");
 
   const rangeStars = [1, 2, 3, 4, 5];
 
@@ -30,14 +33,17 @@ const Lodging = ({ lodgings }) => {
         setHostName(lodgings[i].host.name);
         setHostPicture(lodgings[i].host.picture);
         setRating(lodgings[i].rating);
+        setDescription(lodgings[i].description);
+        setEquipments(lodgings[i].equipments);
+        console.log(lodgings[i].equipments);
       }
     }
 
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
+  console.log(equipments);
 
   const splittedName = hostName.split(" ");
-  console.log(splittedName);
 
   return (
     <main className="lodging">
@@ -79,6 +85,10 @@ const Lodging = ({ lodgings }) => {
           )}
         </ul>
         <ul></ul>
+      </div>
+      <div className="lodging__collapses">
+        <Collapse header="Description" content={description} />
+        <Collapse header="Equipements" content={equipments} />
       </div>
     </main>
   );
