@@ -1,21 +1,6 @@
-import { useParams } from "react-router-dom";
-import { useEffect, useState } from "react";
 import arrow from "../assets/Vector gauche.svg";
 
-function Carrousel({ lodgings }) {
-  const { id } = useParams();
-  const [pictures, setPictures] = useState([]);
-  const [clickCount, setClickCount] = useState(0);
-
-  useEffect(() => {
-    for (let i = 0; i < lodgings.length; i++) {
-      if (lodgings[i].id.includes(id)) {
-        setPictures(lodgings[i].pictures);
-      }
-    }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
-
+function Carrousel({ setClickCount, clickCount, pictures }) {
   return (
     <div className="carrousel">
       <img
@@ -26,7 +11,6 @@ function Carrousel({ lodgings }) {
           clickCount <= 0
             ? setClickCount(pictures.length - 1)
             : setClickCount(clickCount - 1);
-
           console.log(clickCount);
         }}
       />

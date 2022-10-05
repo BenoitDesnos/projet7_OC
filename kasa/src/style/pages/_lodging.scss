@@ -1,0 +1,65 @@
+.lodging {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+
+
+    .lodging__details {
+        position: relative;
+        width: 100%;
+
+        .lodging__details__title {
+            font-size: 36px;
+            font-weight: 400;
+            max-width: 950px;
+            line-height: 50px;
+        }
+
+        .lodging__details__adress {
+            line-height: 25px;
+            font-weight: 500;
+        }
+
+        .lodging__details__host {
+            position: absolute;
+            right: 0;
+            top: 0;
+            height: 64px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+
+            .lodging__details__host__picture {
+                border-radius: 50%;
+                height: 64px;
+                margin-left: 10px;
+            }
+        }
+
+        .lodging__details__tags {
+            display: flex;
+            flex-direction: row;
+
+            li {
+                background-color: $color-2;
+                color: $color-1;
+                margin-right: $small-gap;
+                margin-top: $small-gap;
+                font-size: map-get($font-size, basic);
+                padding: 3px 30px 2px 30px;
+                border-radius: 10px;
+                font-weight: 500;
+            }
+        }
+
+        .lodging__details__stars {
+            display: flex;
+            flex-direction: row;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+        }
+    }
+
+}

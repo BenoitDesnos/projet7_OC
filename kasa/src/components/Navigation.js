@@ -8,19 +8,23 @@ function Navigation() {
     <header>
       <Logo />
       <ul>
-        <NavLink
-          to="/Home"
-          className={(nav) => (nav.isActive ? "nav-active hover" : "hover")}
-        >
-          <li>Accueil</li>
-        </NavLink>
-
-        <NavLink
-          to="/About"
-          className={(nav) => (nav.isActive ? "nav-active hover" : "hover")}
-        >
-          <li>About</li>
-        </NavLink>
+        <li>
+          <NavLink
+            to="/"
+            end
+            className={(nav) => (nav.isActive ? "nav-active hover" : "hover")}
+          >
+            Accueil
+          </NavLink>
+        </li>
+        <li>
+          <NavLink
+            to="/About"
+            className={(nav) => (nav.isActive ? "nav-active hover" : "hover")}
+          >
+            About
+          </NavLink>
+        </li>
       </ul>
     </header>
   );
