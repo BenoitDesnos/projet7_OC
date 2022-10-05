@@ -1,12 +1,15 @@
+// origin Home.js
+
 import { NavLink } from "react-router-dom";
+import Logo from "./Logo";
 
 function Navigation() {
   return (
     <header>
-      <img src="./assets/LOGO.png" alt="" />
+      <Logo />
       <ul>
         <NavLink
-          to="/"
+          to="/Home"
           className={(nav) => (nav.isActive ? "nav-active hover" : "hover")}
         >
           <li>Accueil</li>

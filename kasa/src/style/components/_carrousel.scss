@@ -1,0 +1,31 @@
+.carrousel {
+    position: relative;
+    width: 100%;
+    height: 415px;
+    border-radius: 25px;
+    overflow: hidden;
+
+    .pictures {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+
+    #leftClick {
+        cursor: pointer;
+        position: absolute;
+        left: $medium-gap;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: transparent;
+    }
+
+    #rightClick {
+        cursor: pointer;
+        position: absolute;
+        right: $medium-gap;
+        top: 50%;
+        transform: rotate(180deg) translateY(50%);
+        background-color: transparent;
+    }
+}

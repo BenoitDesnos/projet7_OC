@@ -2,12 +2,12 @@ import Banner from "../components/Banner";
 import Gallery from "../components/Gallery";
 import Navigation from "../components/Navigation";
 
-const Home = () => {
+const Home = ({ lodgings }) => {
   return (
     <main>
       <Navigation />
       <Banner />
-      <Gallery />
+      <Gallery lodgings={lodgings} />
     </main>
   );
 };

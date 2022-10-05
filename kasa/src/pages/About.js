@@ -1,7 +1,12 @@
 import React from "react";
+import Navigation from "../components/Navigation";
 
 const About = () => {
-  return <h1>About</h1>;
+  return (
+    <main>
+      <Navigation />
+    </main>
+  );
 };
 
 export default About;

@@ -1,12 +1,13 @@
 .thumbs__container {
     width: 100%;
-    background-color: $color-4;
+    background-color: $color-3;
     margin-top: $large-gap;
     border-radius: 25px;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     padding: $small-gap 0 $small-gap 0;
+
 
     .thumbs {
         position: relative;
@@ -30,7 +31,7 @@
             position: absolute;
             z-index: 3;
             background-color: transparent;
-            color: $color-4;
+            color: $color-3;
             bottom: 20px;
             left: 20px;
             max-width: 250px;

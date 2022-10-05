@@ -1,7 +1,14 @@
-import React from "react";
+import Navigation from "../components/Navigation";
+import Carrousel from "./../components/Carrousel";
 
-const Lodging = () => {
-  return <h1>Lodging</h1>;
+const Lodging = ({ lodgings }) => {
+  console.log(lodgings);
+  return (
+    <main>
+      <Navigation />
+      <Carrousel lodgings={lodgings} />
+    </main>
+  );
 };
 
 export default Lodging;
