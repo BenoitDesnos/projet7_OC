@@ -10,16 +10,16 @@
     height: 223px;
     background-image: url(../../../public/assets/banner.png);
     background-position: center;
+    background-size: cover;
     margin-top: $medium-gap;
-
 
 
     h2 {
         background-color: transparent;
         color: $color-1;
         z-index: 1;
-        font-weight: 400;
-        font-size: 48px;
+        text-align: center;
+        padding: 10px;
     }
 
     .banner__filter {
@@ -31,5 +31,12 @@
         height: 100%;
 
 
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .banner__container {
+        height: 111px;
+        border-radius: 10px;
     }
 }

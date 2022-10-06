@@ -26,3 +26,20 @@ header {
         }
     }
 }
+
+
+@media screen and (max-width: 576px) {
+    header {
+        img {
+            width: 145px;
+        }
+
+        ul {
+
+            li {
+                margin-left: 10px;
+            }
+
+        }
+    }
+}

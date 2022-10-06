@@ -3,7 +3,6 @@ $font-size: (basic: 14px,
     size1: 48px,
     size2: 36px,
     size3: 24px,
-
     paragraph: 18px,
 );
 $breakpoints: (mobile: 700px,
@@ -43,14 +42,6 @@ body {
     width: 100%;
     overflow-x: hidden;
     margin: auto;
-
-
-
-    @media screen and (max-width: 430px) {
-        position: relative;
-        max-width: 100vw;
-        overflow-y: initial;
-    }
 }
 
 header,
@@ -71,4 +62,11 @@ main {
     margin: auto;
     padding: 0 $medium-gap 240px $medium-gap;
 
+}
+
+@media screen and (max-width: 576px) {
+
+    main {
+        padding: 0 $small-gap 240px $small-gap;
+    }
 }

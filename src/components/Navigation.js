@@ -12,17 +12,21 @@ function Navigation() {
           <NavLink
             to="/"
             end
-            className={(nav) => (nav.isActive ? "nav-active hover" : "hover")}
+            className={(nav) =>
+              nav.isActive ? "nav-active hover size3" : "hover size3"
+            }
           >
-            Accueil
+            ACCUEIL
           </NavLink>
         </li>
         <li>
           <NavLink
             to="/About"
-            className={(nav) => (nav.isActive ? "nav-active hover" : "hover")}
+            className={(nav) =>
+              nav.isActive ? "nav-active hover size3" : "hover size3"
+            }
           >
-            About
+            A PROPOS
           </NavLink>
         </li>
       </ul>

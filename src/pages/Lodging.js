@@ -52,7 +52,7 @@ const Lodging = ({ lodgings }) => {
         setClickCount={setClickCount}
       />
       <div className="lodging__details max__width">
-        <h1 className="lodging__details__title">{title}</h1>
+        <h1 className="lodging__details__title size2">{title}</h1>
         <p className="lodging__details__adress">{location}</p>
         <div className="lodging__details__host">
           <p className="lodging__details__host__name">
@@ -64,7 +64,7 @@ const Lodging = ({ lodgings }) => {
             className="lodging__details__host__picture"
           ></img>
         </div>
-        <ul className="lodging__details__tags">
+        <ul className="lodging__details__tags sizeb">
           {tags.map((tag, index) => (
             <li key={tag + index}>{tag}</li>
           ))}

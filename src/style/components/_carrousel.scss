@@ -22,20 +22,38 @@
     }
 
     #leftClick {
-        cursor: pointer;
-        position: absolute;
+        @include carrouselClicks;
         left: $medium-gap;
-        top: 50%;
         transform: translateY(-50%);
-        background-color: transparent;
     }
 
     #rightClick {
-        cursor: pointer;
-        position: absolute;
+        @include carrouselClicks;
         right: $medium-gap;
-        top: 50%;
         transform: rotate(180deg) translateY(50%);
-        background-color: transparent;
+
     }
+}
+
+@media screen and (max-width: 576px) {
+    .carrousel {
+
+        height: 255px;
+
+        #leftClick,
+        #rightClick {
+            width: 12px;
+        }
+
+
+        #rightClick {
+            right: 5px;
+        }
+
+        #leftClick {
+            left: 5px;
+        }
+    }
+
+
 }
