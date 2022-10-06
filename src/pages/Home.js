@@ -1,14 +1,18 @@
 import Banner from "../components/Banner";
+import Footer from "../components/Footer";
 import Gallery from "../components/Gallery";
 import Navigation from "../components/Navigation";
 
 const Home = ({ lodgings }) => {
   return (
-    <main>
-      <Navigation />
-      <Banner />
-      <Gallery lodgings={lodgings} />
-    </main>
+    <>
+      <main>
+        <Navigation />
+        <Banner />
+        <Gallery lodgings={lodgings} />
+        <Footer />
+      </main>
+    </>
   );
 };
 

@@ -3,24 +3,48 @@
     margin-bottom: $small-gap;
     position: relative;
     width: 45%;
-
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
     border-radius: 10px;
     background-color: $color-3;
+    overflow: hidden;
+    transition: all 500ms;
+
+
+    &--closed {
+        height: 50px;
+        transition: all 500ms;
+        overflow: hidden;
+    }
+
+    &.about {
+        width: 73%;
+        margin-top: $medium-gap;
+        margin-bottom: 0px;
+
+    }
+
+
 
     .collapse__arrow {
+        cursor: pointer;
         position: absolute;
         top: 17px;
         right: 20px;
         background-color: transparent;
+        transition: all 0.3s;
+
+        &--closed {
+            transform: rotate(540deg);
+            transition: all 0.3s;
+        }
     }
 
     .collapse__header {
         width: 100%;
-        height: 52px;
+
         background-color: $color-2;
         color: $color-1;
         border-radius: 10px;
@@ -29,6 +53,7 @@
     }
 
     .collapse__content {
+
         width: 80%;
         color: $color-2;
         background-color: transparent;

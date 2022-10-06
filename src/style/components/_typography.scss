@@ -5,26 +5,30 @@
 
 }
 
-h1 {
+h1,
+.size1 {
 
     font-size: map-get($font-size, size1);
     font-weight: 500;
 
 }
 
-h2 {
+h2,
+.size2 {
     font-size: map-get($font-size, size2);
     font-weight: 500;
 }
 
-h3 {
+h3,
+.size3 {
 
     font-size: map-get($font-size, size3);
     font-weight: 500;
 }
 
 p,
-span {
+span,
+.sizep {
 
     font-size: map-get($font-size, paragraph);
     font-weight: 500;

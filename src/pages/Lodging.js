@@ -6,6 +6,7 @@ import Carrousel from "./../components/Carrousel";
 import starFull from "../assets/VectorStarFull.svg";
 import starEmpty from "../assets/VectorStarEmpty.svg";
 import Collapse from "../components/Collapse";
+import Footer from "../components/Footer";
 
 const Lodging = ({ lodgings }) => {
   const { id } = useParams();
@@ -13,14 +14,15 @@ const Lodging = ({ lodgings }) => {
   const [pictures, setPictures] = useState([]);
   const [tags, setTags] = useState([]);
   const [equipments, setEquipments] = useState([]);
-  const [title, setTitle] = useState("");
-  const [location, setLocation] = useState("");
   const [clickCount, setClickCount] = useState(0);
   const [rating, setRating] = useState(0);
+  const [title, setTitle] = useState("");
+  const [location, setLocation] = useState("");
   const [hostName, setHostName] = useState("");
   const [hostPicture, setHostPicture] = useState("");
   const [description, setDescription] = useState("");
 
+  const splittedName = hostName.split(" ");
   const rangeStars = [1, 2, 3, 4, 5];
 
   useEffect(() => {
@@ -28,32 +30,28 @@ const Lodging = ({ lodgings }) => {
       if (lodgings[i].id.includes(id)) {
         setPictures(lodgings[i].pictures);
         setTags(lodgings[i].tags);
+        setEquipments(lodgings[i].equipments);
+        setRating(lodgings[i].rating);
         setTitle(lodgings[i].title);
         setLocation(lodgings[i].location);
         setHostName(lodgings[i].host.name);
         setHostPicture(lodgings[i].host.picture);
-        setRating(lodgings[i].rating);
         setDescription(lodgings[i].description);
-        setEquipments(lodgings[i].equipments);
-        console.log(lodgings[i].equipments);
       }
     }
 
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
-  console.log(equipments);
-
-  const splittedName = hostName.split(" ");
 
   return (
-    <main className="lodging">
+    <main className="lodging ">
       <Navigation />
       <Carrousel
         clickCount={clickCount}
         pictures={pictures}
         setClickCount={setClickCount}
       />
-      <div className="lodging__details">
+      <div className="lodging__details max__width">
         <h1 className="lodging__details__title">{title}</h1>
         <p className="lodging__details__adress">{location}</p>
         <div className="lodging__details__host">
@@ -86,10 +84,21 @@ const Lodging = ({ lodgings }) => {
         </ul>
         <ul></ul>
       </div>
-      <div className="lodging__collapses">
-        <Collapse header="Description" content={description} />
-        <Collapse header="Equipements" content={equipments} />
+      <div className="lodging__collapses max__width">
+        <Collapse
+          header="Description"
+          content={description}
+          addClass={null}
+          addId="1"
+        />
+        <Collapse
+          header="Equipements"
+          content={equipments}
+          addClass={null}
+          addId="2"
+        />
       </div>
+      <Footer />
     </main>
   );
 };

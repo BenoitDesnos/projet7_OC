@@ -6,6 +6,15 @@
     overflow: hidden;
     margin-bottom: $medium-gap;
 
+    .picture__order {
+        position: absolute;
+        bottom: $medium-gap;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: transparent;
+        color: $color-1;
+    }
+
     .pictures {
         object-fit: cover;
         width: 100%;

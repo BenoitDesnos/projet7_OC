@@ -13,6 +13,7 @@ $breakpoints: (mobile: 700px,
 $color-1: white;
 $color-2: #FF6060;
 $color-3:#F6F6F6;
+$color-4: black;
 /*  -------------------- gaps ---------------------- */
 $large-gap: 60px;
 $medium-gap: 30px;
@@ -42,7 +43,8 @@ body {
     width: 100%;
     overflow-x: hidden;
     margin: auto;
-    padding: 0 $medium-gap 0 $medium-gap;
+
+
 
     @media screen and (max-width: 430px) {
         position: relative;
@@ -51,13 +53,22 @@ body {
     }
 }
 
+header,
+.max__width {
+    max-width: 1240px;
+    margin: auto;
+
+}
+
 main {
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    max-width: 90%;
-    max-width: 1240px;
+    width: 100%;
+    min-height: 100vh;
     margin: auto;
+    padding: 0 $medium-gap 240px $medium-gap;
 
 }

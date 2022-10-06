@@ -1,8 +1,11 @@
 import arrow from "../assets/Vector gauche.svg";
 
 function Carrousel({ setClickCount, clickCount, pictures }) {
-  return (
-    <div className="carrousel">
+  return pictures.length > 1 ? (
+    <div className="carrousel max__width">
+      <span className="picture__order">
+        {clickCount + 1 + "/" + pictures.length}
+      </span>
       <img
         src={arrow}
         alt="clic gauche"
@@ -31,6 +34,10 @@ function Carrousel({ setClickCount, clickCount, pictures }) {
           console.log(pictures);
         }}
       />
+    </div>
+  ) : (
+    <div className="carrousel">
+      <img src={pictures[0]} alt="Images du carrousel" className="pictures" />
     </div>
   );
 }
