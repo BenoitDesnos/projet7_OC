@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Footer from "../components/Footer";
 
 import Navigation from "../components/Navigation";
 
@@ -14,6 +15,7 @@ const NotFound = () => {
       <Link to="/" className="notfound__link sizep">
         Retourner sur la page d’accueil
       </Link>
+      <Footer />
     </main>
   );
 };

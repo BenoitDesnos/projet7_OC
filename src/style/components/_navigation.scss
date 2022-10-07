@@ -27,15 +27,28 @@ header {
     }
 }
 
+@media screen and (max-width: map-get($breakpoints, tablet)) {
+    header {
+        img {
+            width: 180px;
+        }
 
-@media screen and (max-width: 576px) {
+        ul {
+            li {
+                margin-left: 35px;
+            }
+
+        }
+    }
+}
+
+@media screen and (max-width: map-get($breakpoints, mobile)) {
     header {
         img {
             width: 145px;
         }
 
         ul {
-
             li {
                 margin-left: 10px;
             }

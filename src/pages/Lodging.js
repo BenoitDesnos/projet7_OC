@@ -11,7 +11,7 @@ import Footer from "../components/Footer";
 const Lodging = ({ lodgings }) => {
   const { id } = useParams();
 
-  const [pictures, setPictures] = useState([]);
+  const [picturesArray, setPicturesArray] = useState([]);
   const [tags, setTags] = useState([]);
   const [equipments, setEquipments] = useState([]);
   const [clickCount, setClickCount] = useState(0);
@@ -28,7 +28,7 @@ const Lodging = ({ lodgings }) => {
   useEffect(() => {
     for (let i = 0; i < lodgings.length; i++) {
       if (lodgings[i].id.includes(id)) {
-        setPictures(lodgings[i].pictures);
+        setPicturesArray(lodgings[i].pictures);
         setTags(lodgings[i].tags);
         setEquipments(lodgings[i].equipments);
         setRating(lodgings[i].rating);
@@ -43,12 +43,18 @@ const Lodging = ({ lodgings }) => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
+  function collapseContentArray() {
+    let descriptionArray = [description];
+    descriptionArray.push(equipments);
+    return descriptionArray;
+  }
+
   return (
     <main className="lodging ">
       <Navigation />
       <Carrousel
         clickCount={clickCount}
-        pictures={pictures}
+        picturesArray={picturesArray}
         setClickCount={setClickCount}
       />
       <div className="lodging__details max__width">
@@ -85,18 +91,14 @@ const Lodging = ({ lodgings }) => {
         <ul></ul>
       </div>
       <div className="lodging__collapses max__width">
-        <Collapse
-          header="Description"
-          content={description}
-          addClass={null}
-          addId="1"
-        />
-        <Collapse
-          header="Equipements"
-          content={equipments}
-          addClass={null}
-          addId="2"
-        />
+        {collapseContentArray().map((element, index) => (
+          <Collapse
+            key={element + index}
+            header={typeof element === "string" ? "Description" : "Equipments"}
+            content={element}
+            addClass={null}
+          />
+        ))}
       </div>
       <Footer />
     </main>

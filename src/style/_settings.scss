@@ -5,8 +5,8 @@ $font-size: (basic: 14px,
     size3: 24px,
     paragraph: 18px,
 );
-$breakpoints: (mobile: 700px,
-    tablet: 1024px,
+$breakpoints: (mobile: 576px,
+    tablet: 888px,
 );
 /*  -------------------- colors ---------------------- */
 $color-1: white;
@@ -28,7 +28,7 @@ $small-gap: 15px;
     border: none;
     text-decoration: none;
     color: $color-2;
-    background-color: $color-1;
+
 
 
 }
@@ -64,7 +64,7 @@ main {
 
 }
 
-@media screen and (max-width: 576px) {
+@media screen and (max-width: map-get($breakpoints, mobile)) {
 
     main {
         padding: 0 $small-gap 240px $small-gap;

@@ -1,73 +1,55 @@
 import collapseArrow from "../assets/VectorCollapseArrow.svg";
 import { useState } from "react";
 
-function Collapse({ header, content, addClass, addId }) {
+function Collapse({ header, content, addClass }) {
   const [isOpen, setIsOpen] = useState(false);
 
-  // cette fonction à pour seul utilité de pouvoir lancer une transition sur la
+  /* La présence de cette fn est justifiée par le besoin
+  d'effectuer une transition sur une height dynamique selon
+  le contenu de la collapse, transition sur height auto impossible,
+  nous l'utilison aussi au passage pour jouer setisOpen()*/
+
   function toggleCollapses() {
-    var collapseContainer = document.getElementById(addId);
-    var collapseHeader = document.querySelector(".collapse__header");
-    console.log(collapseHeader);
-    // default height in _collapse.scss = 50
+    let collapseContainer = document.getElementById(header);
+    let collapseHeader = document.querySelector(".collapse__header");
+
+    /* if collapseContainer & collapseHeader have different heights then collapse is open else it is closed*/
+
     if (collapseContainer.clientHeight !== collapseHeader.clientHeight) {
-      collapseContainer.style.height = collapseHeader.clientHeight + "px";
+      // if collapse is open
+      collapseContainer.style.height = collapseHeader.clientHeight + "px"; // set new height
       setIsOpen(false);
     } else {
-      var collapsesContent = document.querySelector(`#\\3${addId} > ul`);
-
-      collapseContainer.style.height =
+      // if collapse is closed
+      let collapsesContent = document.querySelector(`#${header} > ul`);
+      collapseContainer.style.height = //set new height
         collapsesContent.clientHeight +
         collapseContainer.clientHeight +
-        60 + // margin top bottom .collapse__content in .collapse.scss
+        60 + // 60 === margin top + bottom of .collapse__content in .collapse.scss
         "px";
-
       setIsOpen(true);
     }
   }
 
-  return isOpen ? (
-    <div className={"collapse__container " + addClass} id={addId}>
-      <img
-        src={collapseArrow}
-        alt="collapse toggle"
-        className="collapse__arrow"
-        onClick={() => toggleCollapses()}
-      />
-
-      <div className="collapse__header">
-        <p>{header}</p>
-      </div>
-
-      <ul className="collapse__content">
-        {typeof content === "string" ? (
-          <li className="collapse__content__element sizep">{content}</li>
-        ) : (
-          content.map((element, index) => (
-            <li
-              className="collapse__content__element list"
-              key={element + index}
-            >
-              {element}
-            </li>
-          ))
-        )}
-      </ul>
-    </div>
-  ) : (
+  return (
     <div
       className={" collapse__container collapse__container--closed " + addClass}
-      id={addId}
+      id={header} // we use header props to set dynamic id
     >
       <img
         src={collapseArrow}
         alt="collapse toggle"
-        className="collapse__arrow collapse__arrow--closed"
+        className={
+          isOpen
+            ? "collapse__arrow "
+            : " collapse__arrow collapse__arrow--closed"
+        }
         onClick={() => toggleCollapses()}
       />
-      <div className="collapse__header">
+      <div className="collapse__header" onClick={() => toggleCollapses()}>
         <p>{header}</p>
       </div>
+
       <ul className="collapse__content">
         {typeof content === "string" ? (
           <li className="collapse__content__element sizep">{content}</li>
