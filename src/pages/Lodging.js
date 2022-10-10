@@ -42,11 +42,11 @@ const Lodging = ({ lodgings }) => {
 
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
-
+  // create array of elements needed in Collapses maping
   function collapseContentArray() {
-    let descriptionArray = [description];
-    descriptionArray.push(equipments);
-    return descriptionArray;
+    let collapseArray = [description];
+    collapseArray.push(equipments);
+    return collapseArray;
   }
 
   return (

@@ -36,7 +36,7 @@ function Carrousel({ setClickCount, clickCount, picturesArray }) {
     </div>
   ) : (
     // else return only one picture
-    <div className="carrousel">
+    <div className="carrousel max__width">
       <img
         src={picturesArray[0]}
         alt="Images du carrousel"

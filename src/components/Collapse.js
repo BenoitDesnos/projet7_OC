@@ -49,7 +49,6 @@ function Collapse({ header, content, addClass }) {
       <div className="collapse__header" onClick={() => toggleCollapses()}>
         <p>{header}</p>
       </div>
-
       <ul className="collapse__content">
         {typeof content === "string" ? (
           <li className="collapse__content__element sizep">{content}</li>
