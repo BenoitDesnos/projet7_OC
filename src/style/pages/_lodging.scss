@@ -62,10 +62,16 @@
 
 }
 
-@media screen and (max-width: 576px) {
+@media screen and (max-width: map-get($breakpoints, tablet)) {
+    .lodging .lodging__details .lodging__details__title {
+        max-width: 73%;
+    }
+}
+
+@media screen and (max-width: map-get($breakpoints, mobile)) {
     .lodging .lodging__details {
         .lodging__details__title {
-            max-width: 80%;
+            max-width: 100%;
             line-height: 50px;
         }
 
