@@ -1,3 +1,5 @@
+// used in Home.js, About.js, Lodging.js, NotFound.js
+
 import Logo from "../assets/VectorLogo.svg";
 
 function Footer() {

@@ -1,6 +1,7 @@
+// used in Lodging.js
+
 import arrow from "../assets/Vector gauche.svg";
 
-// props from Lodging.js
 function Carrousel({ setClickCount, clickCount, picturesArray }) {
   // if more than one pciture return carrousell
   return picturesArray.length > 1 ? (

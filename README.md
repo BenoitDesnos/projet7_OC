@@ -6,10 +6,6 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 In the project directory, you can run:
 
-### `start backend`
-
-use `json-server --watch db.json --port 3001` to start the api
-
 ### `yarn start`
 
 Runs the app in the development mode.\

@@ -1,3 +1,5 @@
+// used in Navigation.js
+
 import image from "../assets/LOGO.png";
 
 function Logo() {

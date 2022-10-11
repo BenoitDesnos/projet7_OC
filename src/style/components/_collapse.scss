@@ -74,6 +74,8 @@
 
 @media screen and (max-width: map-get($breakpoints, mobile)) {
     .collapse__container {
+        margin-top: $small-gap;
+        margin-bottom: $small-gap *0.2;
         border-radius: 5px;
         width: 100%;
 

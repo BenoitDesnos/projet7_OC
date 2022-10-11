@@ -1,4 +1,4 @@
-// origin Home.js
+// used Home.js
 
 import { Link } from "react-router-dom";
 

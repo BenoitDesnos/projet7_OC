@@ -11,10 +11,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home lodgings={lodgings} />}></Route>
         <Route path="/About" element={<About />}></Route>
-        <Route
-          path="/Lodging/:id"
-          element={<Lodging lodgings={lodgings} />}
-        ></Route>
+        <Route path="/Lodging/:id" element={<Lodging lodgings={lodgings} />} />
         <Route path="/*" element={<NotFound />}></Route>
       </Routes>
     </BrowserRouter>

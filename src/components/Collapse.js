@@ -1,3 +1,5 @@
+// used in Lodging.js, About.js
+
 import collapseArrow from "../assets/VectorCollapseArrow.svg";
 import { useState } from "react";
 
@@ -34,7 +36,7 @@ function Collapse({ header, content, addClass }) {
   return (
     <div
       className={" collapse__container collapse__container--closed " + addClass}
-      id={header} // we use header props to set dynamic id
+      id={header} // we use props header to set dynamic id
     >
       <img
         src={collapseArrow}
@@ -50,12 +52,13 @@ function Collapse({ header, content, addClass }) {
         <p>{header}</p>
       </div>
       <ul className="collapse__content">
+        {/* if props content isnt "string" then it's an array */}
         {typeof content === "string" ? (
           <li className="collapse__content__element sizep">{content}</li>
         ) : (
           content.map((element, index) => (
             <li
-              className="collapse__content__element list"
+              className="collapse__content__element list sizep"
               key={element + index}
             >
               {element}

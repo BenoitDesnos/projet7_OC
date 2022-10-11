@@ -1,3 +1,4 @@
+// used in Home.js
 function Banner() {
   return (
     <div className="banner__container max__width">

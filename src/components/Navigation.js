@@ -1,4 +1,4 @@
-// origin Home.js
+// used in Home.js, About.js, Lodging.js, NotFound.js
 
 import { NavLink } from "react-router-dom";
 import Logo from "./Logo";
