@@ -1,12 +1,11 @@
 // used in Home.js, About.js, Lodging.js, NotFound.js
 
 import { NavLink } from "react-router-dom";
-import Logo from "./Logo";
 
 function Navigation() {
   return (
     <header>
-      <Logo />
+      <img src="./assets/LOGO.png" alt="Logo Kasa" />;
       <ul>
         <li>
           <NavLink

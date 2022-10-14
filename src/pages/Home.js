@@ -6,7 +6,7 @@ import Navigation from "../components/Navigation";
 const Home = ({ lodgings }) => {
   return (
     <>
-      <main>
+      <main className="home">
         <Navigation />
         <Banner />
         <Gallery lodgings={lodgings} />

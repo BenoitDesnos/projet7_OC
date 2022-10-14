@@ -1,8 +1,14 @@
-.about__collapses {
-    width: 100%;
+.about {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
-    flex-direction: column;
-    margin-top: $medium-gap;
+
+    .about__collapses {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin-top: $medium-gap;
+    }
 }

@@ -38,7 +38,7 @@ html {
 }
 
 body {
-    height: 100vh;
+    height: auto;
     width: 100%;
     overflow-x: hidden;
     margin: auto;
@@ -47,7 +47,7 @@ body {
 header,
 .max__width {
     max-width: 1240px;
-    margin: auto;
+    margin: 0 auto 0 auto;
 
 }
 

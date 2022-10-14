@@ -7,7 +7,7 @@ import collapsesContentArray from "../data/about.json";
 
 const About = () => {
   return (
-    <main>
+    <main className="about">
       <Navigation />
       <Banner />
       <div className="about__collapses max__width">
