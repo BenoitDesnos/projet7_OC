@@ -5,7 +5,7 @@ import { NavLink } from "react-router-dom";
 function Navigation() {
   return (
     <header>
-      <img src="./assets/LOGO.png" alt="Logo Kasa" />;
+      <img src="./assets/LOGO.png" alt="Logo Kasa" />
       <ul>
         <li>
           <NavLink
