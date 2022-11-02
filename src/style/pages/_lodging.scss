@@ -16,7 +16,7 @@
 
             line-height: 20px;
 
-            margin-top: 5px;
+            margin-top: $small-gap;
         }
 
         .lodging__details__host {
@@ -41,6 +41,7 @@
             flex-direction: row;
             flex-wrap: wrap;
             max-width: 70%;
+            margin-top: $small-gap;
 
             li {
                 background-color: $color-2;

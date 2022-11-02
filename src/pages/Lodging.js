@@ -24,7 +24,7 @@ const Lodging = ({ lodgings }) => {
   const [hostName, setHostName] = useState("");
   const [hostPicture, setHostPicture] = useState("");
   const [description, setDescription] = useState("");
-  const [isIdInUrl, setIsIdInUrl] = useState(false); // check if is id in url
+  const [isIdInUrl, setIsIdInUrl] = useState(false); // check if good id, if not display notfound page
   // ----------------- const -----------------------------
   const splittedName = hostName.split(" ");
   const rangeStars = [1, 2, 3, 4, 5];
