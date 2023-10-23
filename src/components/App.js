@@ -4,7 +4,7 @@ import Lodging from "../pages/Lodging";
 import About from "../pages/About";
 import NotFound from "../pages/NotFound";
 import lodgings from "../data/logements.json";
-
+import React from "react";
 function App() {
   return (
     <BrowserRouter>

@@ -1,3 +1,4 @@
+import React from "react";
 import Banner from "../components/Banner";
 import Footer from "../components/Footer";
 import Gallery from "../components/Gallery";
@@ -8,7 +9,7 @@ const Home = ({ lodgings }) => {
     <>
       <main className="home">
         <Navigation />
-        <Banner />
+        <Banner backgroundClass={"background"} />
         <Gallery lodgings={lodgings} />
         <Footer />
       </main>

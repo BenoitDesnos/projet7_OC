@@ -1,5 +1,5 @@
 // used in Home.js, About.js, Lodging.js, NotFound.js
-
+import React from "react";
 import Logo from "../assets/VectorLogo.svg";
 
 function Footer() {

@@ -9,7 +9,7 @@ const About = () => {
   return (
     <main className="about">
       <Navigation />
-      <Banner />
+      <Banner backgroundClass={"background2"} />
       <div className="about__collapses max__width">
         {collapsesContentArray.map((collapse, index) => (
           <Collapse

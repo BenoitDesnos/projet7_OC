@@ -8,7 +8,6 @@
     height: 223px;
     max-width: 1240px;
     margin-top: $medium-gap;
-    background-image: url(../../../public/assets/banner.png);
     background-position: center;
     background-size: cover;
     overflow: hidden;
@@ -30,6 +29,13 @@
     }
 }
 
+.background {
+    background-image: url(./../../assets/banner.png);
+}
+
+.background2 {
+    background-color: #000000;
+}
 
 @media screen and (max-width: map-get($breakpoints, tablet)) {
     .banner__container {

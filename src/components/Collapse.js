@@ -1,5 +1,5 @@
 // used in Lodging.js, About.js
-
+import React from "react";
 import collapseArrow from "../assets/VectorCollapseArrow.svg";
 import { useState } from "react";
 

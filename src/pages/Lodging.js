@@ -1,5 +1,6 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable jsx-a11y/img-redundant-alt */
+import React from "react";
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import Navigation from "../components/Navigation";
@@ -17,7 +18,6 @@ const Lodging = ({ lodgings }) => {
   const [picturesArray, setPicturesArray] = useState([]);
   const [tags, setTags] = useState([]);
   const [equipments, setEquipments] = useState([]);
-  const [clickCount, setClickCount] = useState(0);
   const [rating, setRating] = useState(0);
   const [title, setTitle] = useState("");
   const [location, setLocation] = useState("");
@@ -42,8 +42,6 @@ const Lodging = ({ lodgings }) => {
         setHostPicture(lodgings[i].host.picture);
         setDescription(lodgings[i].description);
         return setIsIdInUrl(true); // as soon as we find a match we leave the loop and set isIdInUrl to true.
-      } else {
-        setIsIdInUrl(false);
       }
     }
   }, []);
@@ -59,11 +57,7 @@ const Lodging = ({ lodgings }) => {
       {isIdInUrl ? (
         <main className="lodging ">
           <Navigation />
-          <Carrousel
-            clickCount={clickCount}
-            picturesArray={picturesArray}
-            setClickCount={setClickCount}
-          />
+          <Carrousel picturesArray={picturesArray} />
           <div className="lodging__details max__width">
             <h1 className="lodging__details__title size2">{title}</h1>
             <p className="lodging__details__adress">{location}</p>

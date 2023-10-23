@@ -1,8 +1,10 @@
 // used in Lodging.js
-
+import React from "react";
+import { useState } from "react";
 import arrow from "../assets/Vector gauche.svg";
 
-function Carrousel({ setClickCount, clickCount, picturesArray }) {
+function Carrousel({ picturesArray }) {
+  const [clickCount, setClickCount] = useState(0);
   // if more than one pciture return carrousell
   return picturesArray.length > 1 ? (
     <div className="carrousel max__width">

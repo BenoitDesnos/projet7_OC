@@ -1,7 +1,8 @@
 // used in Home.js
-function Banner() {
+import React from "react";
+function Banner({ backgroundClass }) {
   return (
-    <div className="banner__container max__width">
+    <div className={`banner__container ${backgroundClass} max__width`}>
       <h2 className="size1">
         Chez vous,{window.innerWidth < 576 && <br />} partout et ailleurs
       </h2>

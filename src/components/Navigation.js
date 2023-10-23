@@ -1,7 +1,7 @@
 // used in Home.js, About.js, Lodging.js, NotFound.js
 import Logo from "../assets/LOGO.png";
 import { NavLink } from "react-router-dom";
-
+import React from "react";
 function Navigation() {
   return (
     <header>

@@ -1,7 +1,7 @@
 // used Home.js
 
 import { Link } from "react-router-dom";
-
+import React from "react";
 function Gallery({ lodgings }) {
   return (
     <ul className="thumbs__container max__width ">
